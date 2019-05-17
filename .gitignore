@@ -43,7 +43,7 @@ target_wrapper.*
 CMakeLists.txt.user*
 
 #Rmove SFML
-#SFML/*
+SFML/*
 
 #Rmove trash 
 test_art/*
