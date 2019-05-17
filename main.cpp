@@ -2,9 +2,16 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::RenderWindow window(sf::VideoMode(1280,665), "Adventures of the Little Wizard");
+    //sf::CircleShape shape(100.f);
+    //shape.setFillColor(sf::Color::Green);
+
+    sf::Texture tPlayer;
+    tPlayer.loadFromFile("entity.png");
+
+    sf::Sprite sPlayer;
+    sPlayer.setTexture(tPlayer);
+    sPlayer.setPosition(50,100);
 
     while (window.isOpen())
     {
@@ -16,7 +23,7 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        window.draw(sPlayer);
         window.display();
     }
 
